@@ -1,0 +1,318 @@
+/* ===== FEATURES SECTION — VERTICAL STORYTELLING ===== */
+.features {
+  position: relative;
+  width: 100%;
+  background-image: url("/images/bunk-bg-2.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat;
+  overflow: hidden;
+  padding-bottom: 4rem;
+}
+
+/* ===== SECTION HEADER ===== */
+.sectionHeader {
+  text-align: center;
+  padding: 5rem 2rem 3rem;
+  position: relative;
+  z-index: 5;
+}
+
+.sectionTitle {
+  font-family: "Caveat", cursive;
+  font-size: clamp(2.6rem, 5vw, 3.8rem);
+  font-weight: 700;
+  color: #1e2d5a;
+  margin-bottom: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.sectionTitleIcon {
+  width: clamp(36px, 5vw, 52px);
+  height: auto;
+}
+
+.sectionSubtitle {
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  color: #5a6f9a;
+  font-style: italic;
+  margin: 0;
+}
+
+/* ===== FEATURE CARDS CONTAINER ===== */
+.cardsContainer {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ===== INDIVIDUAL FEATURE CARD ===== */
+.card {
+  display: flex;
+  align-items: center;
+  gap: clamp(2rem, 4vw, 4rem);
+  padding: 3rem 2rem;
+  position: relative;
+  border-radius: 18px;
+}
+
+.cardReverse {
+  flex-direction: row-reverse;
+}
+
+/* ===== TEXT SIDE ===== */
+.textSide {
+  flex: 1;
+  min-width: 0;
+}
+
+.featureNumber {
+  font-family: "Caveat", cursive;
+  font-size: clamp(3.5rem, 7vw, 5.5rem);
+  font-weight: 700;
+  color: rgba(44, 62, 107, 0.07);
+  line-height: 1;
+  margin-bottom: -0.5rem;
+  user-select: none;
+}
+
+.featureTitle {
+  font-family: "Caveat", cursive;
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 700;
+  color: #1e2d5a;
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+  position: relative;
+  display: inline-block;
+}
+
+.titleAccent {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #2c3e6b, rgba(44, 62, 107, 0.2));
+  border-radius: 2px;
+}
+
+.featureDesc {
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  color: #3a4f7a;
+  line-height: 1.75;
+  margin-bottom: 0.3rem;
+}
+
+.featureDesc strong {
+  color: #1e2d5a;
+  font-weight: 600;
+}
+
+/* ===== Highlighted words ===== */
+.highlight {
+  background: linear-gradient(
+    180deg,
+    transparent 55%,
+    rgba(255, 220, 100, 0.45) 55%
+  );
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  padding: 0 4px;
+  border-radius: 2px;
+}
+
+.highlightGreen {
+  background: linear-gradient(
+    180deg,
+    transparent 55%,
+    rgba(100, 200, 130, 0.3) 55%
+  );
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  padding: 0 4px;
+  border-radius: 2px;
+}
+
+.highlightRed {
+  background: linear-gradient(
+    180deg,
+    transparent 55%,
+    rgba(255, 120, 100, 0.3) 55%
+  );
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  padding: 0 4px;
+  border-radius: 2px;
+}
+
+/* ===== IMAGE SIDE ===== */
+.imageSide {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.featureImage {
+  width: clamp(200px, 28vw, 340px);
+  height: auto;
+  filter: drop-shadow(0 8px 28px rgba(44, 62, 107, 0.12));
+  position: relative;
+  z-index: 2;
+}
+
+/* Subtle radial glow behind images */
+.imageBg {
+  position: absolute;
+  width: 130%;
+  height: 130%;
+  top: -15%;
+  left: -15%;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(44, 62, 107, 0.04) 0%,
+    transparent 70%
+  );
+  z-index: 1;
+}
+
+/* ===== WAVY SVG DIVIDERS ===== */
+.dividerSvg {
+  display: block;
+  width: min(85%, 600px);
+  height: 18px;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.dividerPath {
+  fill: none;
+  stroke: rgba(44, 62, 107, 0.12);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+/* ===== BOTTOM TAGLINE ===== */
+.bottomTagline {
+  text-align: center;
+  padding: 3rem 2rem 2rem;
+  position: relative;
+  z-index: 5;
+}
+
+.taglineText {
+  font-family: "Caveat", cursive;
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  color: #2c3e6b;
+  line-height: 1.5;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.taglineText strong {
+  font-size: 1.15em;
+  color: #1e2d5a;
+}
+
+/* ===== DECORATIVE CLOUDS ===== */
+.cloudDeco {
+  position: absolute;
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cloud1 {
+  width: clamp(55px, 7vw, 95px);
+  top: 5%;
+  left: 4%;
+  animation: featureFloat1 22s ease-in-out infinite;
+}
+
+.cloud2 {
+  width: clamp(60px, 8vw, 100px);
+  bottom: 10%;
+  right: 5%;
+  animation: featureFloat2 18s ease-in-out infinite reverse;
+}
+
+@keyframes featureFloat1 {
+  0%,
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+  33% {
+    transform: translateX(10px) translateY(-8px);
+  }
+  66% {
+    transform: translateX(-6px) translateY(5px);
+  }
+}
+
+@keyframes featureFloat2 {
+  0%,
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-12px) translateY(-6px);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 768px) {
+  .card,
+  .cardReverse {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+  }
+
+  .featureImage {
+    width: clamp(180px, 50vw, 260px);
+  }
+
+  .featureNumber {
+    font-size: clamp(3rem, 10vw, 4.5rem);
+  }
+
+  .sectionHeader {
+    padding: 3rem 1.2rem 1.5rem;
+  }
+
+  .bottomTagline {
+    padding: 2rem 1.2rem 3rem;
+  }
+
+  .titleAccent {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .cardsContainer {
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .featureImage {
+    width: clamp(160px, 55vw, 220px);
+  }
+
+  .featureTitle {
+    font-size: 1.6rem;
+  }
+
+  .featureDesc {
+    font-size: 0.95rem;
+  }
+}

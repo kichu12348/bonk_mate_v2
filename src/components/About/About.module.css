@@ -1,7 +1,401 @@
+/* ===== ABOUT / STORY SECTION ===== */
 .about {
-  height: 100vh;
-  background-image: url("/images/bunk-bg.png");
-  background-size: cover;
+  position: relative;
+  width: 100%;
+  background-image: url("/images/bunk-bg-2.png");
+  background-size: contain;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
+  padding: 6rem 2rem 4rem;
+  overflow: hidden;
+}
+
+.aboutInner {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== TITLE ===== */
+.storyTitle {
+  font-family: "Caveat", cursive;
+  font-size: clamp(2.6rem, 5vw, 3.8rem);
+  font-weight: 700;
+  color: #1e2d5a;
+  text-align: center;
+  margin-bottom: 3rem;
+  line-height: 1.2;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.titleUnderline {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #2c3e6b, transparent);
+  border-radius: 2px;
+}
+
+/* ===== STORY BLOCKS ===== */
+.storyBlock {
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.storyBlock:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== INTRO BLOCK ===== */
+.introBlock {
+  text-align: center;
+}
+
+.introText {
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  color: #3a4f7a;
+  line-height: 1.7;
+  max-width: 550px;
+  margin: 0 auto 2rem;
+}
+
+.introImageWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
+  max-width: 420px;
+}
+
+.introImage {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  filter: drop-shadow(0 6px 20px rgba(44, 62, 107, 0.1));
+}
+
+/* ===== "So I did" transition ===== */
+.soIdidBlock {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.soIdid {
+  font-family: "Caveat", cursive;
+  font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+  color: #3a4f7a;
+  line-height: 1.6;
+}
+
+.soIdid strong {
+  font-size: 1.3em;
+  color: #1e2d5a;
+}
+
+.soIdid em {
+  font-style: normal;
+  color: #5a6f9a;
+}
+
+/* ===== WHY EXISTS ===== */
+.whyBlock {
+  position: relative;
+}
+
+.blockTitle {
+  font-family: "Caveat", cursive;
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 700;
+  color: #1e2d5a;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.blockTitleIcon {
+  width: clamp(36px, 5vw, 52px);
+  height: auto;
+  filter: drop-shadow(0 2px 6px rgba(44, 62, 107, 0.08));
+}
+
+.whyText {
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  color: #3a4f7a;
+  line-height: 1.75;
+  margin-bottom: 0.4rem;
+}
+
+.whyText strong {
+  color: #1e2d5a;
+  font-weight: 600;
+}
+
+/* Highlighted words */
+.highlight {
+  background: linear-gradient(
+    180deg,
+    transparent 55%,
+    rgba(255, 220, 100, 0.45) 55%
+  );
+  padding: 0 4px;
+  border-radius: 2px;
+}
+
+.highlightRed {
+  background: linear-gradient(
+    180deg,
+    transparent 55%,
+    rgba(255, 120, 100, 0.3) 55%
+  );
+  padding: 0 4px;
+  border-radius: 2px;
+}
+
+/* ===== BUNKMATE DOES BLOCK ===== */
+.doesBlock {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.doesLeft {
+  flex: 1;
+  min-width: 280px;
+}
+
+.doesTitle {
+  font-family: "Caveat", cursive;
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 700;
+  color: #1e2d5a;
+  margin-bottom: 1.2rem;
+}
+
+.checkList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.checkItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+  color: #3a4f7a;
+  line-height: 1.55;
+}
+
+.checkMark {
+  color: #4a9e6f;
+  font-weight: 700;
+  font-size: 1.2em;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.doesRight {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phonePreview {
+  width: clamp(140px, 18vw, 200px);
+  height: auto;
+  filter: drop-shadow(0 8px 24px rgba(44, 62, 107, 0.15));
+}
+
+/* curved arrow from checklist to phone */
+.curvedArrow {
+  position: absolute;
+  right: 220px;
+  top: 50%;
+  width: 60px;
+  opacity: 0.7;
+}
+
+/* ===== HONEST PART ===== */
+.honestBlock {
+  position: relative;
+}
+
+.honestText {
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  color: #3a4f7a;
+  line-height: 1.75;
+  margin-bottom: 0.6rem;
+}
+
+.honestText strong {
+  color: #1e2d5a;
+}
+
+.realityLine {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  color: #2c3e6b;
+  font-weight: 600;
+  margin-top: 1rem;
+  letter-spacing: 0.02em;
+}
+
+/* ===== TAGLINE ===== */
+.taglineBlock {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+}
+
+.taglineImage {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  filter: drop-shadow(0 4px 12px rgba(44, 62, 107, 0.1));
+}
+
+/* ===== DECORATIVE ELEMENTS ===== */
+.cloudDeco {
+  position: absolute;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 1;
+  filter: drop-shadow(0 2px 6px rgba(44, 62, 107, 0.06));
+}
+
+.cloudDeco1 {
+  width: clamp(60px, 8vw, 110px);
+  top: 8%;
+  right: 5%;
+  animation: decoFloat1 20s ease-in-out infinite;
+}
+
+.cloudDeco2 {
+  width: clamp(50px, 7vw, 90px);
+  top: 40%;
+  left: 3%;
+  animation: decoFloat2 24s ease-in-out infinite;
+}
+
+.cloudDeco3 {
+  width: clamp(55px, 7vw, 95px);
+  bottom: 15%;
+  right: 4%;
+  animation: decoFloat1 18s ease-in-out infinite reverse;
+}
+
+@keyframes decoFloat1 {
+  0%,
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+  25% {
+    transform: translateX(12px) translateY(-6px);
+  }
+  50% {
+    transform: translateX(4px) translateY(4px);
+  }
+  75% {
+    transform: translateX(-8px) translateY(-2px);
+  }
+}
+
+@keyframes decoFloat2 {
+  0%,
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+  33% {
+    transform: translateX(-10px) translateY(5px);
+  }
+  66% {
+    transform: translateX(6px) translateY(-8px);
+  }
+}
+
+/* ===== DIVIDER LINE ===== */
+.dividerSvg {
+  width: 100%;
+  max-width: 500px;
+  margin: 2.5rem auto;
+  display: block;
+  overflow: visible;
+}
+
+.dividerPath {
+  fill: none;
+  stroke: #2c3e6b;
+  stroke-width: 2;
+  stroke-linecap: round;
+  opacity: 0.3;
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 768px) {
+  .about {
+    padding: 4rem 1.2rem 3rem;
+  }
+
+  .storyBlock {
+    margin-bottom: 3rem;
+  }
+
+  .doesBlock {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .doesLeft {
+    min-width: auto;
+  }
+
+  .checkItem {
+    justify-content: center;
+  }
+
+  .curvedArrow {
+    display: none;
+  }
+
+  .doesRight {
+    order: -1;
+  }
+
+  .blockTitle {
+    justify-content: center;
+  }
+
+  .whyBlock,
+  .honestBlock {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about {
+    padding: 3rem 1rem 2rem;
+  }
+
+  .storyTitle {
+    font-size: 2.2rem;
+  }
+
+  .introImage {
+    max-width: 300px;
+  }
+
+  .phonePreview {
+    width: 140px;
+  }
 }
