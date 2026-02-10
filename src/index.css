@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Caveat:wght@400;600;700&family=Coming+Soon&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-color: #2c3e6b;
+  --secondary-color: #f5f0e8;
+  --bg-image: url("/images/bunk-bg.png");
+}
+
+body {
+  font-family: "Patrick Hand", cursive;
+  background: var(--bg-image);
+  color: var(--primary-color);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--secondary-color);
+}
+
+body::-webkit-scrollbar-track-piece {
+  background: var(--secondary-color);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: "Patrick Hand", cursive;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
