@@ -1,0 +1,183 @@
+.downloadSection {
+  width: 100%;
+  padding: 6rem 2rem;
+  background-color: transparent; /* Letting the body background show through */
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+/* ===== PHONE IMAGE SIDE ===== */
+.imageSide {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  max-width: 500px;
+}
+
+.phoneImg {
+  width: 100%;
+  max-width: 320px; /* Adjust based on the actual image aspect ratio */
+  height: auto;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 10px 20px rgba(var(--primary-rgb), 0.25));
+  transition: transform 0.3s ease;
+}
+
+.phoneImg:hover {
+  transform: translateY(-5px) rotate(-2deg);
+}
+
+/* Decorative blob behind phone */
+.blob {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  z-index: 1;
+  border-radius: 50%;
+}
+
+/* ===== CONTENT SIDE ===== */
+.contentSide {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.title {
+  font-family: "Caveat", cursive;
+  font-size: 3.5rem;
+  color: var(--primary-color);
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.stepNum {
+  background: var(--primary-color);
+  color: var(--text-white);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Patrick Hand", cursive;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.step p {
+  font-family: "Patrick Hand", cursive;
+  font-size: 1.4rem;
+  color: var(--text-body);
+  line-height: 1.2;
+}
+
+.step strong {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.downloadBtnWrapper {
+  display: inline-block;
+  margin-top: 1rem;
+  transition: transform 0.2s ease;
+  max-width: 250px;
+}
+
+.downloadBtnWrapper:hover {
+  transform: scale(1.05);
+}
+
+.downloadBtnImg {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.versionInfo {
+  font-family: "Patrick Hand", cursive;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-top: -0.5rem;
+  opacity: 0.8;
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 968px) {
+  .wrapper {
+    flex-direction: column-reverse;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .imageSide {
+    justify-content: center;
+  }
+
+  .contentSide {
+    align-items: center;
+  }
+
+  .instructions {
+    align-items: flex-start;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .step p {
+    font-size: 1.2rem;
+  }
+
+  .phoneImg {
+    max-width: 260px;
+  }
+
+  .downloadBtnWrapper {
+    max-width: 200px;
+  }
+}

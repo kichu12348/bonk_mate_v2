@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import styles from "./Hero.module.css";
+import Config from "@/constants";
 
 gsap.registerPlugin(useGSAP);
 
@@ -46,7 +47,7 @@ const Hero = () => {
           descRef.current,
           buttonsRef.current,
         ],
-        { opacity: 0, y: 30 },
+        { y: 30 },
       );
 
       gsap.set(
@@ -56,7 +57,7 @@ const Hero = () => {
           cloud3Ref.current,
           cloud4Ref.current,
         ],
-        { opacity: 0, scale: 0.5 },
+        { scale: 0.5 },
       );
 
       // Animate in sequence
@@ -108,25 +109,25 @@ const Hero = () => {
       <div className={styles.cloudsContainer}>
         <img
           ref={cloud1Ref}
-          src="/images/cloud-1.png"
+          src={Config.CDN_URL + "/images/cloud-1.webp"}
           alt=""
           className={`${styles.cloud} ${styles.cloud1}`}
         />
         <img
           ref={cloud2Ref}
-          src="/images/cloud-2.png"
+          src={Config.CDN_URL + "/images/cloud-2.webp"}
           alt=""
           className={`${styles.cloud} ${styles.cloud2}`}
         />
         <img
           ref={cloud3Ref}
-          src="/images/cloud-3.png"
+          src={Config.CDN_URL + "/images/cloud-3.webp"}
           alt=""
           className={`${styles.cloud} ${styles.cloud3}`}
         />
         <img
           ref={cloud4Ref}
-          src="/images/cloud-4.png"
+          src={Config.CDN_URL + "/images/cloud-4.webp"}
           alt=""
           className={`${styles.cloud} ${styles.cloud4}`}
         />
@@ -137,28 +138,31 @@ const Hero = () => {
         <div className={styles.heroInner}>
           {/* Left Section */}
           <div className={styles.heroLeft}>
-            <h1 className={styles.heroTitle} ref={titleRef}>
+            <h1 className={styles.heroTitle + " op-zero"} ref={titleRef}>
               Can I bunk today?
             </h1>
 
-            <div className={styles.heroIllustration} ref={illustrationRef}>
+            <div
+              className={styles.heroIllustration + " op-zero"}
+              ref={illustrationRef}
+            >
               <img
-                src="/images/sleeping-guy.png"
+                src={Config.CDN_URL + "/images/sleeping-guy.webp"}
                 alt="Student sleeping on desk with alarm clock and question marks"
                 className={styles.sleepingGuy}
               />
             </div>
 
-            <p className={styles.heroDescription} ref={descRef}>
+            <p className={styles.heroDescription + " op-zero"} ref={descRef}>
               BunkMate tells you when{"\n"}you can skip class{"\n"}without
               risking attendance.
             </p>
 
             {/* CTA Button */}
-            <div className={styles.heroButtons} ref={buttonsRef}>
+            <div className={styles.heroButtons + " op-zero"} ref={buttonsRef}>
               <a href="#download" className={styles.btnDownload}>
                 <img
-                  src="/images/drawn-download-btn.png"
+                  src={Config.CDN_URL + "/images/drawn-download-btn.webp"}
                   alt="Download App"
                   className={styles.btnDownloadImg}
                 />
@@ -167,22 +171,26 @@ const Hero = () => {
           </div>
 
           {/* Arrow */}
-          <div className={styles.arrowContainer} ref={arrowRef}>
-            <img src="/images/arrow.png" alt="" className={styles.arrowImg} />
+          <div className={styles.arrowContainer + " op-zero"} ref={arrowRef}>
+            <img
+              src={Config.CDN_URL + "/images/arrow.webp"}
+              alt=""
+              className={styles.arrowImg}
+            />
           </div>
 
           {/* Right Section - Phone */}
           <div className={styles.heroRight}>
-            <div className={styles.phoneContainer} ref={phoneRef}>
+            <div className={styles.phoneContainer + " op-zero"} ref={phoneRef}>
               <img
-                src="/images/phone-img.png"
+                src={Config.CDN_URL + "/images/phone-img.webp"}
                 alt="BunkMate app showing 75% attendance - Safe to bunk!"
                 className={styles.phoneImg}
               />
               <img
-                src="/images/danger-zone.png"
+                src={Config.CDN_URL + "/images/danger-zone.webp"}
                 alt="Danger Zone!"
-                className={styles.dangerBadge}
+                className={styles.dangerBadge + " op-zero"}
                 ref={dangerRef}
               />
             </div>

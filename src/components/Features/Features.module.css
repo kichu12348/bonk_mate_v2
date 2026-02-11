@@ -2,7 +2,7 @@
 .features {
   position: relative;
   width: 100%;
-  background-image: url("/images/bunk-bg-2.png");
+  background-image: var(--bg-image);
   background-size: contain;
   background-position: center;
   background-repeat: repeat;
@@ -22,7 +22,7 @@
   font-family: "Caveat", cursive;
   font-size: clamp(2.6rem, 5vw, 3.8rem);
   font-weight: 700;
-  color: #1e2d5a;
+  color: var(--text-heading);
   margin-bottom: 0.5rem;
   display: inline-flex;
   align-items: center;
@@ -36,7 +36,7 @@
 
 .sectionSubtitle {
   font-size: clamp(1rem, 1.6vw, 1.15rem);
-  color: #5a6f9a;
+  color: var(--text-subtitle);
   font-style: italic;
   margin: 0;
 }
@@ -75,7 +75,7 @@
   font-family: "Caveat", cursive;
   font-size: clamp(3.5rem, 7vw, 5.5rem);
   font-weight: 700;
-  color: rgba(44, 62, 107, 0.07);
+  color: rgba(var(--primary-rgb), 0.07);
   line-height: 1;
   margin-bottom: -0.5rem;
   user-select: none;
@@ -85,7 +85,7 @@
   font-family: "Caveat", cursive;
   font-size: clamp(1.8rem, 3.5vw, 2.6rem);
   font-weight: 700;
-  color: #1e2d5a;
+  color: var(--text-heading);
   margin-bottom: 0.8rem;
   line-height: 1.2;
   position: relative;
@@ -98,19 +98,23 @@
   left: 0;
   width: 0;
   height: 3px;
-  background: linear-gradient(90deg, #2c3e6b, rgba(44, 62, 107, 0.2));
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    rgba(var(--primary-rgb), 0.2)
+  );
   border-radius: 2px;
 }
 
 .featureDesc {
   font-size: clamp(1rem, 1.6vw, 1.15rem);
-  color: #3a4f7a;
+  color: var(--text-body);
   line-height: 1.75;
   margin-bottom: 0.3rem;
 }
 
 .featureDesc strong {
-  color: #1e2d5a;
+  color: var(--text-heading);
   font-weight: 600;
 }
 
@@ -119,7 +123,7 @@
   background: linear-gradient(
     180deg,
     transparent 55%,
-    rgba(255, 220, 100, 0.45) 55%
+    var(--highlight-yellow) 55%
   );
   background-size: 0% 100%;
   background-repeat: no-repeat;
@@ -131,7 +135,7 @@
   background: linear-gradient(
     180deg,
     transparent 55%,
-    rgba(100, 200, 130, 0.3) 55%
+    var(--highlight-green) 55%
   );
   background-size: 0% 100%;
   background-repeat: no-repeat;
@@ -143,7 +147,7 @@
   background: linear-gradient(
     180deg,
     transparent 55%,
-    rgba(255, 120, 100, 0.3) 55%
+    var(--highlight-red) 55%
   );
   background-size: 0% 100%;
   background-repeat: no-repeat;
@@ -163,7 +167,7 @@
 .featureImage {
   width: clamp(200px, 28vw, 340px);
   height: auto;
-  filter: drop-shadow(0 8px 28px rgba(44, 62, 107, 0.12));
+  filter: drop-shadow(0 8px 28px rgba(var(--primary-rgb), 0.12));
   position: relative;
   z-index: 2;
 }
@@ -178,7 +182,7 @@
   border-radius: 50%;
   background: radial-gradient(
     ellipse at center,
-    rgba(44, 62, 107, 0.04) 0%,
+    rgba(var(--primary-rgb), 0.04) 0%,
     transparent 70%
   );
   z-index: 1;
@@ -195,7 +199,7 @@
 
 .dividerPath {
   fill: none;
-  stroke: rgba(44, 62, 107, 0.12);
+  stroke: rgba(var(--primary-rgb), 0.12);
   stroke-width: 2;
   stroke-linecap: round;
 }
@@ -211,7 +215,7 @@
 .taglineText {
   font-family: "Caveat", cursive;
   font-size: clamp(1.3rem, 2.5vw, 1.8rem);
-  color: #2c3e6b;
+  color: var(--primary-color);
   line-height: 1.5;
   max-width: 600px;
   margin: 0 auto;
@@ -219,7 +223,7 @@
 
 .taglineText strong {
   font-size: 1.15em;
-  color: #1e2d5a;
+  color: var(--text-heading);
 }
 
 /* ===== DECORATIVE CLOUDS ===== */

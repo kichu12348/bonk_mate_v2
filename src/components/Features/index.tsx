@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import styles from "./Features.module.css";
+import Config from "@/constants";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -13,7 +14,7 @@ const FEATURES = [
   {
     number: "01",
     title: "Better Attendance UI",
-    image: "/images/better-ui.png",
+    image: "/images/better-ui.webp",
     alt: "BunkMate clean attendance interface showing 82% overall percentage",
     paragraphs: [
       <>
@@ -30,7 +31,7 @@ const FEATURES = [
   {
     number: "02",
     title: "Daily Course Attendance",
-    image: "/images/daily-course-attendance.png",
+    image: "/images/daily-course-attendance.webp",
     alt: "Calendar view showing per-day attendance history per course",
     paragraphs: [
       <>
@@ -47,7 +48,7 @@ const FEATURES = [
   {
     number: "03",
     title: "Hourly Tracking",
-    image: "/images/hourly-tracking.png",
+    image: "/images/hourly-tracking.webp",
     alt: "Phone showing exact hours 9 AM, 10 AM, 11 AM, 1 PM attendance",
     paragraphs: [
       <>
@@ -66,7 +67,7 @@ const FEATURES = [
   {
     number: "04",
     title: "Manual Marking & Conflict Resolution",
-    image: "/images/manual-marking.png",
+    image: "/images/manual-marking.webp",
     alt: "Side-by-side YOURS vs OFFICIAL attendance clipboards",
     paragraphs: [
       <>
@@ -84,7 +85,7 @@ const FEATURES = [
   {
     number: "05",
     title: "Smart Conflict Detection",
-    image: "/images/conflict.png",
+    image: "/images/conflict.webp",
     alt: "Conflicting records between your marked and official attendance",
     paragraphs: [
       <>
@@ -497,12 +498,12 @@ export default function Features() {
     <section className={styles.features} ref={sectionRef} id="features">
       {/* Floating clouds */}
       <img
-        src="/images/cloud-1.png"
+        src={Config.CDN_URL + "/images/cloud-1.webp"}
         alt=""
         className={`${styles.cloudDeco} ${styles.cloud1}`}
       />
       <img
-        src="/images/cloud-2.png"
+        src={Config.CDN_URL + "/images/cloud-2.webp"}
         alt=""
         className={`${styles.cloudDeco} ${styles.cloud2}`}
       />
@@ -511,7 +512,7 @@ export default function Features() {
       <div className={styles.sectionHeader} ref={headerRef}>
         <h2 className={styles.sectionTitle}>
           <img
-            src="/images/alarm.png"
+            src={Config.CDN_URL + "/images/alarm.webp"}
             alt=""
             className={styles.sectionTitleIcon}
           />
@@ -550,7 +551,7 @@ export default function Features() {
               <div className={styles.imageSide}>
                 <div className={styles.imageBg} />
                 <img
-                  src={feat.image}
+                  src={Config.CDN_URL + feat.image}
                   alt={feat.alt}
                   className={styles.featureImage}
                   data-img

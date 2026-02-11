@@ -13,9 +13,36 @@ html {
 }
 
 :root {
+  /* Core Colors */
   --primary-color: #2c3e6b;
+  --primary-rgb: 44, 62, 107;
+  --primary-dark: #1a2a4a; /* Hover state */
   --secondary-color: #f5f0e8;
-  --bg-image: url("/images/bunk-bg.png");
+  --secondary-rgb: 245, 240, 232;
+
+  /* Text Colors */
+  --text-heading: #1e2d5a;
+  --text-body: #3a4f7a;
+  --text-subtitle: #5a6f9a; /* Also covers #5a6f9a and em tags */
+  --text-light: #6c7a9c;
+  --text-white: #ffffff;
+
+  /* Accents & UI */
+  --accent-blue: #5a7ec2;
+  --accent-light-blue: #4a6aa8; /* For gradients */
+  --separator-light: #b8c4d8;
+  --separator-blue: #8a9cc5;
+  --success-green: #4a9e6f;
+  --accent-red: #ff0000;
+
+  /* Highlights (Gradients/Backgrounds) */
+  --highlight-yellow: rgba(255, 220, 100, 0.45);
+  --highlight-green: rgba(100, 200, 130, 0.3);
+  --highlight-red: rgba(255, 120, 100, 0.3);
+
+  /* Backgrounds */
+  --bg-image: url("_BG_URL_");
+  --bg-mobile-menu: rgba(245, 240, 232, 0.96);
 }
 
 body {
@@ -74,4 +101,9 @@ button {
   cursor: pointer;
   border: none;
   background: none;
+}
+
+/* " op-zero" class */
+.op-zero {
+  opacity: 0;
 }

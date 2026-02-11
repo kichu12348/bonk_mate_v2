@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import styles from "./About.module.css";
+import Config from "@/constants";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -612,17 +613,17 @@ const About = () => {
     <section className={styles.about} ref={sectionRef} id="about">
       {/* Floating Decorative Clouds */}
       <img
-        src="/images/cloud-1.png"
+        src={Config.CDN_URL + "/images/cloud-1.webp"}
         alt=""
         className={`${styles.cloudDeco} ${styles.cloudDeco1}`}
       />
       <img
-        src="/images/cloud-2.png"
+        src={Config.CDN_URL + "/images/cloud-2.webp"}
         alt=""
         className={`${styles.cloudDeco} ${styles.cloudDeco2}`}
       />
       <img
-        src="/images/cloud-3.png"
+        src={Config.CDN_URL + "/images/cloud-3.webp"}
         alt=""
         className={`${styles.cloudDeco} ${styles.cloudDeco3}`}
       />
@@ -653,7 +654,7 @@ const About = () => {
 
           <div className={styles.introImageWrapper} ref={introImageRef}>
             <img
-              src="/images/sys-why-no-me.png"
+              src={Config.CDN_URL + "/images/sys-why-no-me.webp"}
               alt='"This system sucks... why not build my own?"'
               className={styles.introImage}
             />
@@ -685,7 +686,7 @@ const About = () => {
         <div className={`${styles.storyBlock} ${styles.whyBlock}`}>
           <div className={styles.blockTitle} ref={whyTitleRef}>
             <img
-              src="/images/alarm.png"
+              src={Config.CDN_URL + "/images/alarm.webp"}
               alt=""
               className={styles.blockTitleIcon}
             />
@@ -744,7 +745,7 @@ const About = () => {
           </div>
           <div className={styles.doesRight} ref={phoneRef}>
             <img
-              src="/images/phone-img.png"
+              src={Config.CDN_URL + "/images/phone-img.webp"}
               alt="BunkMate app showing 75% attendance — Safe to bunk!"
               className={styles.phonePreview}
             />
@@ -757,7 +758,7 @@ const About = () => {
         <div className={`${styles.storyBlock} ${styles.honestBlock}`}>
           <div className={styles.blockTitle} ref={honestTitleRef}>
             <img
-              src="/images/alarm.png"
+              src={Config.CDN_URL + "/images/alarm.webp"}
               alt=""
               className={styles.blockTitleIcon}
             />
@@ -786,7 +787,7 @@ const About = () => {
           ref={taglineRef}
         >
           <img
-            src="/images/tagline-story.png"
+            src={Config.CDN_URL + "/images/tagline-story.webp"}
             alt="Bunk responsibly. Graduate safely."
             className={styles.taglineImage}
           />
